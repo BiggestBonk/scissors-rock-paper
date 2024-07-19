@@ -9,4 +9,24 @@ function getComputerChoice () {
     }else if (compChoice === 3)
         return "paper"
 }
-console.log(getComputerChoice ())
+
+function getHumanChoice() {
+    //prompt for player to choose
+    let playerChoice = prompt("Paper, Scissors, rock?")
+    //check whether the choice is valid
+     if (playerChoice === "Paper"||
+        playerChoice === "Scissors"||
+        playerChoice === "Rock")
+     return playerChoice
+     while (playerChoice != "Paper" ||
+        playerChoice != "Scissors"||
+        playerChoice != "Rock")
+    prompt("Please choose a valid selection")
+
+
+       
+
+    //return choice
+}
+
+console.log(getHumanChoice())
