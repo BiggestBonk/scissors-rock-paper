@@ -13,18 +13,25 @@ function getComputerChoice () {
 function getHumanChoice() {
     //prompt for player to choose
     let playerChoice = prompt("Paper, Scissors, rock?")
+    playerChoice = playerChoice.toLowerCase()
     //check whether the choice is valid
-     if (playerChoice === "Paper"||
-        playerChoice === "Scissors"||
-        playerChoice === "Rock")
-     return playerChoice
-     while (playerChoice != "Paper" ||
-        playerChoice != "Scissors"||
-        playerChoice != "Rock")
-    prompt("Please choose a valid selection")
+     if (playerChoice === "paper"||
+        playerChoice === "scissors"||
+        playerChoice === "rock"){
+     return playerChoice }
+        while (playerChoice != "paper" ||
+        playerChoice != "scissors"||
+        playerChoice != "rock") {
+        playerChoice = prompt("invalid choice, choose again")
+        playerChoice = playerChoice.toLowerCase()
+        if (playerChoice === "paper"||
+            playerChoice === "scissors"||
+            playerChoice === "rock"){
+         return playerChoice }
+        }
 
 
-       
+
 
     //return choice
 }
